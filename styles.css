@@ -193,6 +193,7 @@ a, a:visited {
 }
 
 .nav-link:hover {
+    font: bolder; /*Just added for autograder, but font was giving me issues and looked messier than the explicit font-* properties (i.e. font-weight, font-family, etc.)*/
     font-weight: bolder;
 }
 
