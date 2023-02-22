@@ -17,19 +17,14 @@
             // Super neat package that has no dependencies or need for npm :D
             // Got approval from Sebastian to utilize packages (INCLUDING BOOTSTRAP!)
 
-            //Disable the form from submitting and refresh page
-            // var form = document.getElementById("myForm");
-            // function handleForm(event) { event.preventDefault(); } 
-            // form.addEventListener('submit', handleForm);
-
             const jsConfetti = new JSConfetti();
 
             function emojiStorm() {
                 var inp = document.getElementById("anything");
                 console.log(inp.value)
-                inp = inp.value.split(" ")
+                parsed = inp.value.split(" ")
                 jsConfetti.addConfetti({
-                    emojis: inp,
+                    emojis: parsed,
                     emojiRadius: 10,
                     emojiColors: ['#4c2525']
                 });
