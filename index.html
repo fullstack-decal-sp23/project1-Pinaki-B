@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pinaki Bhagavan</title>
+        <meta name="author" content="Pinaki Bhagavan">
+        <meta charset="utf-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>  </head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    </head>
+    <body style="background-color:#FAF2E4">
+        <script>
+            // CREDITS: https://www.npmjs.com/package/js-confetti
+            // Super neat package that has no dependencies or need for npm :D
+            // Got approval from Sebastian to utilize packages (INCLUDING BOOTSTRAP!)
+
+            //Disable the form from submitting and refresh page
+            // var form = document.getElementById("myForm");
+            // function handleForm(event) { event.preventDefault(); } 
+            // form.addEventListener('submit', handleForm);
+
+            const jsConfetti = new JSConfetti();
+
+            function emojiStorm() {
+                var inp = document.getElementById("anything");
+                console.log(inp.value)
+                inp = inp.value.split(" ")
+                jsConfetti.addConfetti({
+                    emojis: inp,
+                    emojiRadius: 10,
+                    emojiColors: ['#4c2525']
+                });
+            }
+        </script>
+        <canvas></canvas>
+        <nav class="navbar navbar-custom navbar-expand">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://bit.ly/thx_for_reading5">Resume</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="mailto:mbhagavan@berkeley.edu">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="hero-container">
+            <div class="container-fluid h-100">
+                <div class="row">
+                    <p class="hero-name">
+                        Pinaki Bhagavan
+                    </p>
+                </div>
+                <div class="row fs-5">
+                    <p class="hero-subtext">
+                        Neurotech Enthusiast, Modded MC Addict, Samoyed Lover                
+                    </p>
+                </div>
+                <div class=row>
+                    <p class="hero-subtext">
+                        <a href="https://github.com/Pinaki-B" target="_blank">
+                            <i class="bi-github" role="img" aria-label="GitHub" style="margin-right: 10px; font-size: 2rem; color: #4C2525;"></i>               
+                        </a>
+                        <a href="https://www.linkedin.com/in/mrinal-bhagavan-ab60801a2/" target="_blank">
+                            <i class="bi-linkedin" role="img" aria-label="GitHub" style="margin-right: 40px; font-size: 2rem; color: #4C2525;"></i>               
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="pfp-container">
+                <img class="pfp" src="pfp.jpg" alt="Picture of me holding food and smiling big.">
+            </div>
+        </div>
+        <hr>
+        <div class="grid-container">
+            <div class="grid-item-1">
+                <h2>About</h2>
+                <p>I'm a current junior studying EECS @ UC Berkeley, planning to graduate in Winter 2023! I'm a highly inquisitive person that always does deep research on topics before moving to work or implement them. I'm currently invested in Neurotech, but love hearing people passionate about a subject in absolutely any field talk about it. I like to think I can adapt well to most problems, appropriately doing foundational research, planning, more research, and execution to tackle the goal.</p>
+            </div>
+            <div class="grid-item-2">
+                <h2>Work</h2>
+                <p>In the past, I've done SWE @ Amazon, Red Hat. For a couple years in HS, i was very involved with high-energy particle physics @ Fermilab, where my role was based in particle sensor firmware. I started a Neurotech startup that was interviewed for YCombinator and reached licensing deals with Oculus and Samsung. In the summer I'll be returning to work at The Voleon Group (a quant firm based in Berkeley) as a Data Engineering Intern.</p>
+                <button onclick="alert('This button does nothing!')" type="button" class="btn btn-outline-dark">Dark</button>
+            </div>
+            <div class="grid-item-3">
+                <h2>For my graders!</h2>
+                <form id="myForm" onsubmit="emojiStorm(); return false;">
+                    <label for="anything">😀:</label>
+                    <input type="text" id="anything">
+                    <br>
+                    <small class="form-text text-muted">Input emojis or text seperated by spaces!</small>
+                    <br>
+                    <br>
+                    <input type="submit" class="btn btn-outline-dark">
+                </form>
+                <div style="color: #FAF2E4;">
+                    <h1>h1</h1>
+                    <h3>h2</h3>
+                    <h4>h4</h4>
+                    <h5>h5</h5>
+                    <h6>h6</h6>
+                </div>
+            </div>
+        </div>
+        
+        
+        </body>
+</html>
